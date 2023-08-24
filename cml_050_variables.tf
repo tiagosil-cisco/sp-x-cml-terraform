@@ -276,6 +276,18 @@ variable "links" {
       slot_a = 8
       slot_b = 4
     },
+    p1_rrpce1 = {
+      node_a = "p1"
+      node_b = "rrpce1"
+      slot_a = 7
+      slot_b = 3
+    },
+    p3_rrpce2 = {
+      node_a = "p3"
+      node_b = "rrpce2"
+      slot_a = 7
+      slot_b = 3
+    },
 
   }
 }
