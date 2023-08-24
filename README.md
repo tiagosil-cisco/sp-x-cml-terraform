@@ -46,4 +46,5 @@ end
 ```
 
 ## SecureCRT sessions XML
-Terraform will generate a XML file with the sessions pre-configured to imported on SecureCRT.
+
+Terraform will generate a XML file with the sessions pre-configured with the values under variable xp_routers to be imported on SecureCRT.
