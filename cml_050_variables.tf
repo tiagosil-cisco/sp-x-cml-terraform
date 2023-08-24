@@ -1,5 +1,5 @@
 locals {
-  project_title        = "SP-X"
+  project_title        = "SP-B"
   project_description  = "Topology created using Terraform to represent SP-X"
   ext_conn_bridge_info = "bridge1" // Make sure to create proper bridge first via Cockpit
   xrv_node_definition  = "iosxrv9000" // Adapt this node ID based on the XR router definition available in your CML Instance
