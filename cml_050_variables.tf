@@ -4,6 +4,8 @@ locals {
   ext_conn_bridge_info = "bridge1" // Make sure to create proper bridge first via Cockpit
   xrv_node_definition  = "iosxrv9000" // Adapt this node ID based on the XR router definition available in your CML Instance
   sp_x_initial_state   = "DEFINED_ON_CORE" // Options are DEFINED_ON_CORE, STOPPED, STARTED, BOOTED
+  default_xr_username = "admin"
+  default_xr_password = "C!sco123"
 
 }
 

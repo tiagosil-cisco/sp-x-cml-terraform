@@ -10,15 +10,16 @@ resource "cml2_node" "xr_routers" {
   y              = each.value.y
   configuration  = <<-EOT
     hostname ${each.value.hostname}
-    username admin
+    username ${local.default_xr_username}
     group root-lr
     group cisco-support
-    password cisco
+    password ${local.default_xr_password}
     exit
     vrf ${each.value.mgmt_vrf}
     address-family ipv4 unicast
     exit
     exit
+    grpc vrf ${each.value.mgmt_vrf}
     interface ${each.value.mgmt_interface}
     vrf ${each.value.mgmt_vrf} 
     ipv4 address ${each.value.mgmt_ip}
