@@ -25,13 +25,9 @@ resource "cml2_node" "xr_routers" {
     ipv4 address ${each.value.mgmt_ip}
     no shutdown
     exit
-    router static
-    vrf ${each.value.mgmt_vrf}
-    address-family ipv4 unicast
+    router static vrf ${each.value.mgmt_vrf} address-family ipv4 unicast
     0.0.0.0/0 ${each.value.mgmt_gw}
-    exit
-    exit
-    exit
+    root
     telnet vrf ${each.value.mgmt_vrf} ipv4 server max-servers 100
     telnet vrf ${each.value.mgmt_vrf} ipv6 server max-servers 100
     ssh server logging

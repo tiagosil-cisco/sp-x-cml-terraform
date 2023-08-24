@@ -9,7 +9,7 @@ resource "local_file" "securecrt_sessions" {
                 %{ for i, hostname in var.xr_routers }
                 <key name="${var.xr_routers[i].hostname}">
                     <dword name="[SSH2] Port">22</dword>
-                    <string name="Hostname">${var.xr_routers[i].mgmt_ip}</string>
+                    <string name="Hostname">${split("/",var.xr_routers[i].mgmt_ip)[0]}</string>
                     <string name="Username">admin</string>
                 </key>
                 %{ endfor }
