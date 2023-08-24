@@ -23,6 +23,7 @@ resource "cml2_node" "xr_routers" {
     interface ${each.value.mgmt_interface}
     vrf ${each.value.mgmt_vrf} 
     ipv4 address ${each.value.mgmt_ip}
+    no shutdown
     exit
     router static
     vrf ${each.value.mgmt_vrf}
