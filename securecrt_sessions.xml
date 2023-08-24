@@ -1,78 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <VanDyke version="3.0">
       <key name="Sessions">
-          
-          <key name="SP-X-XRv-ASBR01">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.59/24</string>
-              <string name="Username">admin</string>
+          <key name="SP-B">
+              
+              <key name="SP-X-XRv-ASBR01">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.59/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-ASBR02">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.60/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-P01">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.53/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-P02">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.54/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-P03">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.55/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-P04">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.56/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-PE01">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.51/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-PE02">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.52/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-PE03">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.57/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-PE04">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.58/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-RRPCE01">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.61/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
+              <key name="SP-X-XRv-RRPCE02">
+                  <dword name="[SSH2] Port">22</dword>
+                  <string name="Hostname">10.0.1.62/24</string>
+                  <string name="Username">admin</string>
+              </key>
+              
           </key>
-          
-          <key name="SP-X-XRv-ASBR02">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.60/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-P01">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.53/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-P02">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.54/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-P03">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.55/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-P04">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.56/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-PE01">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.51/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-PE02">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.52/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-PE03">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.57/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-PE04">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.58/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-RRPCE01">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.61/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
-          <key name="SP-X-XRv-RRPCE02">
-              <dword name="[SSH2] Port">22</dword>
-              <string name="Hostname">10.0.1.62/24</string>
-              <string name="Username">admin</string>
-          </key>
-          
       </key>
   </VanDyke>

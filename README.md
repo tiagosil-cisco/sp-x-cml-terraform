@@ -48,3 +48,6 @@ end
 ## SecureCRT sessions XML
 
 Terraform will generate a XML file with the sessions pre-configured with the values under variable xp_routers to be imported on SecureCRT.
+
+SecureCRT > Tools > Import Settings from XML File...
+Mark only Sessions and select the file "securecrt_sessions.xml" created after running "terraform apply"
