@@ -15,6 +15,11 @@ resource "cml2_node" "xr_routers" {
     group cisco-support
     password ${local.default_xr_password}
     exit
+    tpa
+    vrf ${each.value.mgmt_vrf}
+    address-family ipv4
+    update-source dataports ${each.value.mgmt_interface}
+    root
     vrf ${each.value.mgmt_vrf}
     address-family ipv4 unicast
     exit
