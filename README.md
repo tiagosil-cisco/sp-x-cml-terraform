@@ -2,6 +2,10 @@
 
 This Terraform code creates a base topology to be used as a SP network. It contains PE, P, ASBR and RR-PCE devices.
 
+Topology
+
+![1692979733161](image/README/1692979733161.png)
+
 Please adjust each variable to fit on your environment.
 
 After deploying the lab and devices are running, please check if adding "crypto key generate rsa" on each device is required.
