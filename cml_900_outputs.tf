@@ -6,13 +6,13 @@ resource "local_file" "securecrt_sessions" {
     <VanDyke version="3.0">
         <key name="Sessions">
             <key name="${local.project_title}">
-                %{ for i, hostname in var.xr_routers }
+                %{for i, hostname in var.xr_routers}
                 <key name="${var.xr_routers[i].hostname}">
                     <dword name="[SSH2] Port">22</dword>
-                    <string name="Hostname">${split("/",var.xr_routers[i].mgmt_ip)[0]}</string>
+                    <string name="Hostname">${split("/", var.xr_routers[i].mgmt_ip)[0]}</string>
                     <string name="Username">admin</string>
                 </key>
-                %{ endfor }
+                %{endfor}
             </key>
         </key>
     </VanDyke>

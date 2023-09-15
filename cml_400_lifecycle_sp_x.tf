@@ -11,7 +11,7 @@ resource "cml2_lifecycle" "sp-x" {
     stages          = ["oob_mgmt", "p", "pe", "asbr"]
     start_remaining = false
   }
-  
+
   state = local.sp_x_initial_state
 }
 
