@@ -6,6 +6,7 @@ locals {
   sp_x_initial_state   = "DEFINED_ON_CORE" // Options are DEFINED_ON_CORE, STOPPED, STARTED, BOOTED
   default_xr_username  = "admin"
   default_xr_password  = "C!sco123"
+  xr_routers           = jsondecode(file("${path.module}/sp-x-cml-terraform-vars.json"))
 
 }
 
@@ -21,6 +22,7 @@ variable "cml_info" {
 }
 
 // All the XR routers that will be running on this topology and theirs information
+/*
 variable "xr_routers" {
   type = map(any)
   default = {
@@ -146,6 +148,7 @@ variable "xr_routers" {
     },
   }
 }
+*/
 
 
 // ALl point to point links that will be created between XR routers. Note that Gig0/0/0/0 is 3 and it increases from there.

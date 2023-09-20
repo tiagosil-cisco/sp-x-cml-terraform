@@ -1,0 +1,122 @@
+{
+    "pe1": {
+        "hostname" : "SP-X-XRv-PE01",
+        "tags" : ["pe"],
+        "x" : 0,
+        "y" : 0,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.51/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+        "pe2" : {
+        "hostname" : "SP-X-XRv-PE02",
+        "tags" : ["pe"],
+        "x" : 0,
+        "y" : 200,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.52/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "p1" : {
+        "hostname" : "SP-X-XRv-P01",
+        "tags" : ["p"],
+        "x" : 200,
+        "y" : 0,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.53/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "p2" : {
+        "hostname" : "SP-X-XRv-P02",
+        "tags" : ["p"],
+        "x" : 200,
+        "y" : 200,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.54/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "p3" : {
+        "hostname" : "SP-X-XRv-P03",
+        "tags" : ["p"],
+        "x" : 400,
+        "y" : 0,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.55/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "p4" : {
+        "hostname" : "SP-X-XRv-P04",
+        "tags" : ["p"],
+        "x" : 400,
+        "y" : 200,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.56/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "pe3" : {
+        "hostname" : "SP-X-XRv-PE03",
+        "tags" : ["pe"],
+        "x" : 600,
+        "y" : 0,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.57/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "pe4" : {
+        "hostname" : "SP-X-XRv-PE04",
+        "tags" : ["pe"],
+        "x" : 600,
+        "y" : 200,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.58/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "asbr1" : {
+        "hostname" : "SP-X-XRv-ASBR01",
+        "tags" : ["asbr"],
+        "x" : 200,
+        "y" : 400,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.59/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "asbr2" : {
+        "hostname" : "SP-X-XRv-ASBR02",
+        "tags" : ["asbr"],
+        "x" : 400,
+        "y" : 400,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.60/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "rrpce1" : {
+        "hostname" : "SP-X-XRv-RRPCE01",
+        "tags" : ["rrpce"],
+        "x" : 200,
+        "y" : -200,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.61/24",
+        "mgmt_gw" : "10.0.1.1"
+    },
+    "rrpce2" : {
+        "hostname" : "SP-X-XRv-RRPCE02",
+        "tags" : ["rrpce"],
+        "x" : 400,
+        "y" : -200,
+        "mgmt_interface" : "MgmtEth0/RP0/CPU0/0",
+        "mgmt_vrf" : "MGMT",
+        "mgmt_ip" : "10.0.1.62/24",
+        "mgmt_gw" : "10.0.1.1"
+    }
+}

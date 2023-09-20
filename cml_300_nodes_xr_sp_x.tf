@@ -1,7 +1,7 @@
 
 // all XR router have a similar startup config to allow remote management.
 resource "cml2_node" "xr_routers" {
-  for_each       = var.xr_routers
+  for_each       = local.xr_routers
   lab_id         = cml2_lab.sp-x.id
   label          = each.value.hostname
   nodedefinition = local.xrv_node_definition

@@ -1,7 +1,7 @@
 
 
 resource "cml2_lifecycle" "sp-x" {
-  for_each = var.xr_routers
+  for_each = local.xr_routers
   lab_id   = cml2_lab.sp-x.id
   elements = [
 
