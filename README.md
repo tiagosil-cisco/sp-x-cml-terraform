@@ -2,6 +2,16 @@
 
 This Terraform code creates a base topology to be used as a SP network. It contains PE, P, ASBR and RR-PCE devices.
 
+Before executing terraform apply, do not forget to run 'source .envrc' from the TF directory to populate environment variables with CML address and credentials. Sample .envrc file below
+
+```
+TF_VAR_cml_address="https://192.168.1.1"
+TF_VAR_cml_username="admin"
+TF_VAR_cml_password="admin"
+
+export TF_VAR_cml_username TF_VAR_cml_password TF_VAR_cml_address
+```
+
 Topology
 
 ![1692979733161](image/README/1692979733161.png)
