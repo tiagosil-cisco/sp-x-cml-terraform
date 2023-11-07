@@ -2,46 +2,26 @@
 // all XR router have a similar startup config to allow remote management.
 resource "cml2_node" "xr_routers" {
   for_each       = local.xr_routers
+  //for_each =  {for key, val in local.xr_routers: 
+  //             key => val if val.node_definition == "iosxrv9000"}
   lab_id         = cml2_lab.sp-x.id
   label          = each.value.hostname
-  nodedefinition = local.xrv_node_definition
+  nodedefinition = each.value.node_definition
   tags           = each.value.tags
   x              = each.value.x
   y              = each.value.y
-  configuration  = <<-EOT
-    hostname ${each.value.hostname}
-    username ${local.default_xr_username}
-    group root-lr
-    group cisco-support
-    password ${local.default_xr_password}
-    exit
-    tpa
-    vrf ${each.value.mgmt_vrf}
-    address-family ipv4
-    update-source dataports ${each.value.mgmt_interface}
-    root
-    vrf ${each.value.mgmt_vrf}
-    address-family ipv4 unicast
-    exit
-    exit
-    grpc vrf ${each.value.mgmt_vrf}
-    interface ${each.value.mgmt_interface}
-    vrf ${each.value.mgmt_vrf} 
-    ipv4 address ${each.value.mgmt_ip}
-    no shutdown
-    exit
-    router static vrf ${each.value.mgmt_vrf} address-family ipv4 unicast
-    0.0.0.0/0 ${each.value.mgmt_gw}
-    root
-    telnet vrf ${each.value.mgmt_vrf} ipv4 server max-servers 100
-    telnet vrf ${each.value.mgmt_vrf} ipv6 server max-servers 100
-    ssh server logging
-    ssh server rate-limit 100
-    ssh server session-limit 100
-    ssh server v2
-    ssh server vrf ${each.value.mgmt_vrf}
-    ssh server netconf vrf ${each.value.mgmt_vrf}
-    end
-    EOT 
+
+  configuration = templatefile(each.value.node_definition=="iosxrv9000" ? local.day0_xr_cfg : local.day0_xe_cfg,{
+      hostname = each.value.hostname,
+      default_xr_username = local.default_xr_username,
+      default_xr_password = local.default_xr_password,
+      mgmt_vrf = each.value.mgmt_vrf,
+      mgmt_interface = each.value.mgmt_interface,
+      mgmt_ip = each.value.mgmt_ip,
+      # mgmt_ip = cidrhost(local.mgmt_cidr, 
+      #                   local.mgmt_cidr_offset + index([for key, val in local.xr_routers: val.hostname], each.value.hostname))
+      mgmt_gw = each.value.mgmt_gw
+      }
+    )
 }
 

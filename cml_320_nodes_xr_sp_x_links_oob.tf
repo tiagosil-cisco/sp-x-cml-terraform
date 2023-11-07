@@ -5,5 +5,4 @@ resource "cml2_link" "xr_oob_links" {
   node_a   = cml2_node.xr_routers[each.key].id
   node_b   = cml2_node.L2_SW_EXT_CON.id
   slot_a   = 0
-
 }

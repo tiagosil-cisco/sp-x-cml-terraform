@@ -1,0 +1,33 @@
+hostname ${hostname}
+username ${default_xr_username}
+group root-lr
+group cisco-support
+password ${default_xr_password}
+exit
+tpa
+vrf ${mgmt_vrf}
+address-family ipv4
+update-source dataports ${mgmt_interface}
+root
+vrf ${mgmt_vrf}
+address-family ipv4 unicast
+exit
+exit
+grpc vrf ${mgmt_vrf}
+interface ${mgmt_interface}
+vrf ${mgmt_vrf} 
+ipv4 address ${mgmt_ip}
+no shutdown
+exit
+router static vrf ${mgmt_vrf} address-family ipv4 unicast
+0.0.0.0/0 ${mgmt_gw}
+root
+telnet vrf ${mgmt_vrf} ipv4 server max-servers 100
+telnet vrf ${mgmt_vrf} ipv6 server max-servers 100
+ssh server logging
+ssh server rate-limit 100
+ssh server session-limit 100
+ssh server v2
+ssh server vrf ${mgmt_vrf}
+ssh server netconf vrf ${mgmt_vrf}
+end

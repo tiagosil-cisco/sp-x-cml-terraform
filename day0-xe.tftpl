@@ -1,0 +1,16 @@
+hostname ${hostname}
+username ${default_xr_username}
+password ${default_xr_password}
+exit
+vrf definition ${mgmt_vrf}
+address-family ipv4
+exit
+interface ${mgmt_interface}
+vrf forwarding ${mgmt_vrf} 
+ipv4 address ${mgmt_ip}
+no shutdown
+exit
+ip route vrf ${mgmt_vrf} 0.0.0.0 0.0.0.0 ${mgmt_gw}
+ip domain name example.com
+ip ssh version 2
+end

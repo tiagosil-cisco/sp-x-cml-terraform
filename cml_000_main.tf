@@ -7,9 +7,8 @@ terraform {
 }
 
 provider "cml2" {
-
-  address     = var.cml_info.url
-  username    = var.cml_info.username
-  password    = var.cml_info.password
+  address = "${var.cml_address}"
+  username = "${var.cml_username}"
+  password = "${var.cml_password}"
   skip_verify = true
 }
